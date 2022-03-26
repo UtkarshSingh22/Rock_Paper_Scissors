@@ -16,21 +16,20 @@ function playerSelection(){
 
 function play(cMove,pMove){
 
-    if(cMove == 'rock' && pMove == 'scissor' || cMove == 'paper' && pMove == 'rock' || cMove == 'scissor' && pMove == 'paper'){
-        let res = 'You Lose! '+cMove+' beats '+pMove;
-        return res;
+    let res;
+    if((cMove == 'rock' && pMove == 'scissor') || (cMove == 'paper' && pMove == 'rock') || (cMove == 'scissor' && pMove == 'paper')){
+        res = `You Lose! ${cMove} beats ${pMove}`;
     }
-    else if(pMove == 'rock' && cMove == 'scissor' || pMove == 'paper' && cMove == 'rock' || pMove == 'scissor' && cMove == 'paper'){
-        let res = 'You Won! '+pMove+' beats '+cMove;
-        return res;
+    else if((pMove == 'rock' && cMove == 'scissor') || (pMove == 'paper' && cMove == 'rock') || (pMove == 'scissor' && cMove == 'paper')){
+        res = `You Won! ${pMove} beats ${cMove}`;
     } 
     else{
-        let res = "It's a tie, you both got "+cMove;
-        return res;
+        res = `It's a tie, you both got ${cMove}`;
     } 
+    return res;
 }
 
 let cMove = computerPlay();
 let pMove = playerSelection();
 
-console.log(play());
+console.log(play(cMove, pMove));
