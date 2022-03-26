@@ -7,3 +7,8 @@ function computerPlay(){
     else
         return 'scissor';
 }
+
+function playerSelection(){
+    let pChance = prompt('Enter your choice:');
+    return pChance.toLowerCase();
+}
