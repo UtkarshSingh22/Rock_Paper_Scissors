@@ -29,7 +29,40 @@ function play(cMove,pMove){
     return res;
 }
 
-let cMove = computerPlay();
-let pMove = playerSelection();
+function whoWins(cMove,pMove){
 
-console.log(play(cMove, pMove));
+    let res;
+    if((cMove == 'rock' && pMove == 'scissor') || (cMove == 'paper' && pMove == 'rock') || (cMove == 'scissor' && pMove == 'paper')){
+        res = 1;
+    }
+    else if((pMove == 'rock' && cMove == 'scissor') || (pMove == 'paper' && cMove == 'rock') || (pMove == 'scissor' && cMove == 'paper')){
+        res = 2;
+    }
+    else{
+        res = 0;
+    } 
+    return res;
+}
+
+function game(_cScore,_pScore){
+
+    for(let i=0;i<5;i++){
+        let cMove = computerPlay();
+        let pMove = playerSelection();
+        play(cMove,pMove);
+
+        if(whoWins(cMove, pMove) == 1){
+            _cScore++;
+        }
+        else if(whoWins(cMove,pMove) == 2){
+            _pScore++;
+        }
+        
+        console.log()
+
+    }
+}
+
+let pScore = 0, cScore = 0;
+
+console.log(game(cScore,pScore));
