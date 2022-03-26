@@ -47,9 +47,10 @@ function whoWins(cMove,pMove){
 function game(_cScore,_pScore){
 
     for(let i=0;i<5;i++){
+
         let cMove = computerPlay();
         let pMove = playerSelection();
-        play(cMove,pMove);
+        console.log(play(cMove,pMove));
 
         if(whoWins(cMove, pMove) == 1){
             _cScore++;
@@ -57,12 +58,17 @@ function game(_cScore,_pScore){
         else if(whoWins(cMove,pMove) == 2){
             _pScore++;
         }
+        else{
+            _cScore++;
+            _pScore++;
+        }
         
-        console.log()
-
+        console.log('Computer Score: '); console.log(_cScore);
+        
+        console.log('Your Score: '); console.log(_pScore);
     }
 }
 
-let pScore = 0, cScore = 0;
+let _pScore = 0, _cScore = 0;
 
-console.log(game(cScore,pScore));
+console.log(game(_cScore,_pScore));
