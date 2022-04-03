@@ -9,10 +9,9 @@ function computerPlay(){
         return 'scissor';
 }
 
-function playerSelection(){
-    let pChance = prompt('Enter your choice:');
-    return pChance.toLowerCase();
-}
+
+
+console.log();
 
 function play(cMove,pMove){
 
@@ -44,33 +43,29 @@ function whoWins(cMove,pMove){
     return res;
 }
 
-function game(_cScore,_pScore){
+function game(e){
 
-    while(_cScore < 5 && _pScore < 5){
+    let pChance = e.target.id;
+    let chance = computerPlay();
+    let res = play(chance, pChance);
+    
+    const div = document.createElement('div');
+    div.className = 'result';
+    let text = document.createTextNode(res);
+    div.appendChild(text);
 
-        let cMove = computerPlay();
-        let pMove = playerSelection();
-        console.log(play(cMove,pMove));
-
-        if(whoWins(cMove, pMove) == 1){
-            _cScore++;
-        }
-        else if(whoWins(cMove,pMove) == 2){
-            _pScore++;
-        }
-        
-        console.log('Computer Score: ', _cScore); 
-        console.log('Your Score: ',_pScore);
-    }
-    if(_cScore == 5)
-        console.log('You Lose!');
-    else{
-        console.log('Congratulations, You Won!!');
-    }
+    const btnList = document.querySelector('.btns');
+    btnList.appendChild(div);
 }
 
-let _pScore = 0, _cScore = 0;
+const btns = document.querySelectorAll('button');
 
-console.log(game(_cScore,_pScore));
+for(let i=0;i<btns.length;i++){
+    btns[i].addEventListener('click', game);
+}
+
+
+
+
 
 
