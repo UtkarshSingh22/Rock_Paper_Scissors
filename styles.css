@@ -1,6 +1,15 @@
-.butAdd{
-    background-color: pink;
-    width: 100px;
-    height: 30px;
-    margin: 30px;
+body{
+    display: flex;
+    flex-direction: column;
+}
+.btn-img{
+    width: 200px;
+    height: 200px;
+}
+.start-finRes{
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
 }
