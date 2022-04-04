@@ -1,13 +1,45 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./script.js"></script>
-    <title>Rock Paper Scissors</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="./styles.css">
+        <script src="./script.js" defer></script>
+    </head>
+
+    <body>
+        <div class="header">
+            <p>Rock Paper & Scissors</p>
+        </div>
+        <div class="game">
+            <div class="winner">
+                <p id="winner-text"></p>
+            </div>
+            <div class="score">
+                <p id="score-player"></p>
+                <p id="score-computer"></p>
+            </div>
+            <div class="buttons">
+                <button id="button-rock" class="btn">
+                    <img src="./imgs/rock.png" class="btn-img" alt="Rock">
+                </button>
+                <button id="button-paper" class="btn">
+                    <img src="./imgs/paper.png" class="btn-img" alt="Paper">
+                </button>
+                <button id="button-scissors" class="btn">
+                    <img src="./imgs/scissors.png" class="btn-img" alt="Scissors">
+                </button>
+            </div>
+            <div class="results">
+                <p id="result-text"></p>
+            </div>
+            <div class="restart">
+                <button id="btn-restart">
+                    <img src="./imgs/restart.png" alt="Restart">
+                    <p>New Game</p>
+                </button>
+            </div>
+        </div>
+    </body>
 </html>
