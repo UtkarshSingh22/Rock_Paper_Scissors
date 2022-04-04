@@ -3,13 +3,31 @@ body{
     flex-direction: column;
 }
 .btn-img{
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
 }
 .start-finRes{
     display: flex;
     flex-direction: column;
     height: 60px;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    gap: 30px;
+}
+.gameBtns{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.gameRes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+.scores{
+    display: flex;
     justify-content: center;
     align-items: center;
 }
