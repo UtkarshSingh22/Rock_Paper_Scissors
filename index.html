@@ -1,39 +1,45 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./script.js" defer></script>
-    <link rel="stylesheet" href="./styles.css">
-    <title>Rock Paper Scissors</title>
-</head>
-<body>
-    <div class="start-finRes">
-        <div id="intro">Rock, Paper & Scissors</div>
-        <button id="start">Start a New Game</button>
-        <div id="finalRes">final res</div>
-    </div>
-    <div class="gameBtns">
-        <button class="btn" id="rock">
-            <img src="./imgs/pexels-peter-döpper-2363901.jpg" class="btn-img" alt="Rock">
-            <div class="text" id="rockText">Rock</div>
-        </button>
-        <button class="btn" id="paper">
-            <img src="./imgs/pexels-karolina-grabowska-4207707.jpg" class="btn-img" alt="Paper">
-            <div class="text" id="paperText">Paper</div>
-        </button>
-        <button class="btn" id="scissors">
-            <img src="./imgs/pexels-karolina-grabowska-4226896.jpg" class="btn-img" alt="Scissors">
-            <div class="text" id="scissorText">Scissors</div>
-        </button>
-    </div>
-    <div class="gameRes">
-        <div id="res">res</div>
-    </div>
-    <div class="scores">
-        <div id="pSc">pscore</div>
-        <div id="cSc">cscore</div>
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="./styles.css">
+        <script src="./script.js" defer></script>
+    </head>
+
+    <body>
+        <div class="header">
+            <p>Rock Paper Scissors</p>
+        </div>
+        <div class="game">
+            <div class="winner">
+                <p id="winner-text"></p>
+            </div>
+            <div class="score">
+                <p id="score-player"></p>
+                <p id="score-computer"></p>
+            </div>
+            <div class="buttons">
+                <button id="button-rock" class="btn">
+                    <img src="./imgs/rock.png" class="btn-img" alt="Rock">
+                </button>
+                <button id="button-paper" class="btn">
+                    <img src="./imgs/paper.png" class="btn-img" alt="Paper">
+                </button>
+                <button id="button-scissors" class="btn">
+                    <img src="./imgs/scissors.png" class="btn-img" alt="Scissors">
+                </button>
+            </div>
+            <div class="results">
+                <p id="result-text"></p>
+            </div>
+            <div class="restart">
+                <button id="btn-restart">
+                    <img src="images/restart.png" alt="Restart">
+                    <p>New Game</p>
+                </button>
+            </div>
+        </div>
+    </body>
 </html>
