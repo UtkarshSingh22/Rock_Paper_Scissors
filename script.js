@@ -9,10 +9,6 @@ function computerPlay(){
         return 'scissor';
 }
 
-
-
-console.log();
-
 function play(cMove,pMove){
 
     let res;
@@ -42,10 +38,11 @@ function whoWins(cMove,pMove){
     } 
     return res;
 }
+/*
+let _cScore = 0, _pScore = 0;
 
-function game(e){
-
-    let pChance = e.target.id;
+while(_pScore < 5 && _cScore < 5){
+    let pChance = playerSelec();
     let chance = computerPlay();
     let res = play(chance, pChance);
     
@@ -57,14 +54,60 @@ function game(e){
     const btnList = document.querySelector('.btns');
     btnList.appendChild(div);
 }
+*/
 
-const btns = document.querySelectorAll('button');
 
-for(let i=0;i<btns.length;i++){
-    btns[i].addEventListener('click', game);
+const btns = document.querySelector('button');
+
+btns.addEventListener('click', startGame);
+
+function startGame(e){
+
+    const head = document.querySelector('.btns');
+    head.removeChild(btns);
+
+    const but1 = document.createElement('button');
+    but1.id = 'rock';
+    but1.setAttribute('onClick','getId(this.id)')
+    but1.classList = 'butAdd';
+    but1.textContent = 'ROCK';
+    head.appendChild(but1);
+
+    const but2 = document.createElement('button');
+    but2.id = 'paper';
+    but2.setAttribute('onClick','getId(this.id)')
+    but2.classList = 'butAdd';
+    but2.textContent = 'PAPER';
+    head.appendChild(but2);
+
+    const but3 = document.createElement('button');
+    but3.id = 'scissor';
+    but3.setAttribute('onClick','getId(this.id)')
+    but3.classList = 'butAdd';
+    but3.textContent = 'SCISSORS';
+    head.appendChild(but3);
+
+    //let pScore = 0, cScore = 0;
+    //while(pScore < 5 && cScore < 5){
+
+        const pSel = '';
+        const press = document.querySelectorAll('.butAdd');
+        for(let i=0;i<press.length;i++){
+            press[i].addEventListener('click', getId);   
+        }
+        
+        function getId(e){
+            pSel = e.target.id;
+            return pSel;
+        }
+
+        getId()
+
+        console.log(pSel);
+    //}
+
+
 }
-
-
 
 
 
