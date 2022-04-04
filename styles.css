@@ -7,7 +7,7 @@ body{
 .btn-img{
     width: 400px;
     height: 400px;
-    border-radius: 30px;
+    border-radius: 200px;
 }
 .start-finRes{
     display: flex;
@@ -16,7 +16,8 @@ body{
     justify-content: center;
     align-items: center;
     padding: 100px;
-    gap: 30px;
+    gap: 40px;
+    margin-bottom: 40px;
     
 }
 .gameBtns{
@@ -58,7 +59,7 @@ body{
     color: blueviolet;
 }
 .btn{
-    border-radius: 30px;
+    border-radius: 220px;
     border: 3px double rgb(0, 0, 0);
     background-color:thistle;
 }
