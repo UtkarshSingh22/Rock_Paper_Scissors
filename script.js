@@ -71,14 +71,13 @@ function initGame() {
 
     buttons.forEach(button => {
         button.addEventListener('click', playRound);
-        //button.style.pointerEvents = 'auto';
     });
 }
 
 function finishGame() {
     buttons.forEach(button => {
         button.removeEventListener('click', playRound);
-        //button.style.pointerEvents = 'none';
+        button.style.pointerEvents = 'none';
     });
 
     if (playerScore===5) {
