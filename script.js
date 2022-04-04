@@ -11,7 +11,6 @@ function playerPlay(buttonID) {
 
 function computerPlay() {
     const choice = ['Rock', 'Paper', 'Scissors'];
-    // return a random choice
     return choice[Math.floor(Math.random() * 3)];
 }
 
@@ -51,8 +50,8 @@ function playRound(event) {
 
     }
 
-    scorePlayer.textContent = `You: ${playerScore}`;
-    scoreComputer.textContent = `CPU: ${computerScore}`;
+    scorePlayer.textContent = `Your Score: ${playerScore}`;
+    scoreComputer.textContent = `Computer's Score: ${computerScore}`;
 
     if (playerScore===5 || computerScore===5) {
         finishGame();
@@ -66,20 +65,20 @@ function initGame() {
     computerScore = 0;
 
     winnerText.textContent = '';
-    scorePlayer.textContent = `You: ${playerScore}`;
-    scoreComputer.textContent = `CPU: ${computerScore}`;
+    scorePlayer.textContent = `Your Score: ${playerScore}`;
+    scoreComputer.textContent = `Computer's Score: ${computerScore}`;
     resultText.textContent = '';
 
     buttons.forEach(button => {
         button.addEventListener('click', playRound);
-        button.style.pointerEvents = 'auto';
+        //button.style.pointerEvents = 'auto';
     });
 }
 
 function finishGame() {
     buttons.forEach(button => {
         button.removeEventListener('click', playRound);
-        button.style.pointerEvents = 'none';
+        //button.style.pointerEvents = 'none';
     });
 
     if (playerScore===5) {

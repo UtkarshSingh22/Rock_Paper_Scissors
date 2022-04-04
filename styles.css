@@ -8,26 +8,19 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: monospace;
+    font-family: fantasy;
     user-select: none;
-}
-
-a {
-    color: #f8f8ff;
-}
-
-a:hover {
-    color: cornflowerblue;
+    background-color: rgb(146, 129, 129);
 }
 
 button {
-    background-color: rgb(160 200 250 / 90%);
+    background-color: rgba(255, 174, 0, 0.9);
     border-radius: 15%;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
 }
 
 button:hover {
-    border-radius: 25%;
+    transform:scale(1.1);
 }
 
 div {
@@ -44,6 +37,7 @@ p {
     justify-content: center;
     align-items: center;
     font-size: 50px;
+    color: rgb(255, 166, 0);
 }
 
 .game {
